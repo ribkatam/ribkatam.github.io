@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ribka Tiruneh | AI & ML Researcher</title>
+  <meta name="description" content="Portfolio of Ribka Tiruneh – AI, Machine Learning, and Spiking Neural Networks Researcher." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #020617, #0f172a);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      padding: 5rem 1.5rem 4rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(2,6,23,0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1f2933;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Ribka Tiruneh</h1>
+    <p>
+      AI & Machine Learning Researcher focused on spiking neural networks, 
+      speech emotion recognition, and applied deep learning systems.
+    </p>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>
+        I am an MS student in Electrical Engineering at George Washington University 
+        with a background in Computer Science from KAIST. My research focuses on 
+        biologically inspired learning, memory formation in spiking neural networks, 
+        and applied AI systems such as speech emotion recognition and AAC technologies.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><strong>Languages</strong><br/>Python, C, MATLAB, JavaScript</div>
+      <div class="card"><strong>ML / DL</strong><br/>PyTorch, Librosa, Torchaudio, NLP</div>
+      <div class="card"><strong>Simulation</strong><br/>CARLsim, gem5, Garnet2.0</div>
+      <div class="card"><strong>Frameworks</strong><br/>React, React Native, FastAPI, Django</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="card">
+      <strong>Master's Thesis Research – GWU</strong><br/>
+      <em>Pattern Formation & Retrieval in CA3 SNNs</em>
+      <p>
+        Investigating auto-associative memory, STDP-driven engram formation, 
+        and attractor stability in reduced hippocampal networks.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>AI Researcher – Artificial Language Intelligence</strong>
+      <p>
+        Built a full-stack AAC mobile app using React Native, FastAPI, WebRTC, 
+        and LLM-based dialogue systems. Fine-tuned LLaMA models and deployed on GCP.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Researcher – KAIST AI Institute</strong>
+      <p>
+        Developed speech emotion recognition and multi-modal emotion models using 
+        attention mechanisms and spectrogram-based learning.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>Speech Emotion Recognition</strong>
+        <p>Top-down & bottom-up attention model evaluated on IEMOCAP.</p>
+      </div>
+      <div class="card">
+        <strong>CA3 Spiking Neural Network</strong>
+        <p>Reduced-scale hippocampal model for pattern completion.</p>
+      </div>
+      <div class="card">
+        <strong>Anomaly Detection</strong>
+        <p>GNNs, autoencoders, and ensemble methods for network intrusion detection.</p>
+      </div>
+      <div class="card">
+        <strong>Log-Frequency Filterbank</strong>
+        <p>Pitch-shiftable spectrogram representation for speech processing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:ribka61t@gmail.com">ribka61t@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/ribkatam" target="_blank">github.com/ribkatam</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ribka Tiruneh · Built with vanilla HTML & CSS
+  </footer>
+
+</body>
+</html>
