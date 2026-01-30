@@ -1,214 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ribka Tiruneh | Portfolio</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --bg: #f8f9fa;
-            --text: #333;
-            --light-text: #666;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            margin: 0;
-            background: var(--bg);
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Header */
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: #fff;
-            border-bottom: 1px solid #eee;
-        }
-        h1 { margin: 0; color: var(--primary); font-size: 2.5rem; }
-        .subtitle { color: var(--secondary); font-weight: 500; margin-top: 10px; }
-        .contact-info { margin-top: 20px; font-size: 0.9rem; color: var(--light-text); }
-        
-        /* Sections */
-        section { margin: 50px 0; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; display: inline-block; }
-        
-        /* Experience & Projects */
-        .item { margin-bottom: 30px; }
-        .item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-        .item-title { font-weight: bold; font-size: 1.1rem; color: var(--primary); }
-        .item-date { color: var(--light-text); font-style: italic; }
-        .item-org { color: var(--secondary); font-weight: 500; margin-bottom: 5px; display: block;}
-        ul { margin-top: 10px; padding-left: 20px; }
-        li { margin-bottom: 8px; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ribka Tiruneh | Neuroengineering & AI Researcher</title>
+  <meta name="description" content="Portfolio of Ribka Tiruneh – Researcher bridging biological neural computation and efficient machine learning architectures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* Skills */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .skill-category h3 { font-size: 1rem; color: var(--light-text); text-transform: uppercase; letter-spacing: 1px; }
-        .tags span {
-            display: inline-block;
-            background: #eef2f7;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            margin: 0 5px 5px 0;
-            color: var(--primary);
-        }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7dd3fc; }
 
-        /* Footer */
-        footer { text-align: center; padding: 40px; color: var(--light-text); font-size: 0.8rem; }
-        
-        @media (max-width: 600px) {
-            .item-header { flex-direction: column; }
-            header { padding: 40px 20px; }
-        }
-    </style>
+    /* Layout */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Header */
+    header {
+      padding: 6rem 0 4rem;
+      text-align: left;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0 0 1rem 0;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header .tagline {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+    header .bio {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 750px;
+    }
+
+    /* Sections */
+    section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      border-color: var(--accent);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .card-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .card-subtitle {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .card ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+    }
+    .card li { margin-bottom: 0.5rem; }
+
+    /* Grid for Skills/Projects */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.5rem; }
+      nav ul { gap: 1rem; font-size: 0.85rem; }
+      .card-header { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>Ribka Tiruneh</h1>
-    <div class="subtitle">AI Researcher & Electrical Engineering MS Candidate</div>
-    <div class="contact-info">
-        D.C., U.S. | ribka61t@gmail.com | linkedin.com/in/ribkatam | github.com/ribkatam
-    </div>
-</header>
+<nav>
+  <div class="container">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#engineering">Engineering</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
 <div class="container">
 
-    <section id="education">
-        <h2>Education</h2>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">MS in Electrical Engineering</span>
-                <span class="item-date">Aug 2024 – Present</span>
-            </div>
-            <span class="item-org">The George Washington University</span>
-            <p><strong>Coursework:</strong> Pattern Recognition, Machine Learning, Computer Architecture, Stochastic Processes, Linear Systems Theory.</p>
-        </div>
+  <header>
+    <h1>Ribka Tiruneh</h1>
+    <div class="tagline">Bridging Biological Neural Computation & Machine Intelligence</div>
+    <div class="bio">
+      Researcher exploring the intersection of signal processing and neuroengineering. 
+      I study how biological systems achieve efficiency to inform the design of robust, 
+      biologically-inspired learning architectures[cite: 71, 73].
+    </div>
+  </header>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">BS in Computer Science</span>
-                <span class="item-date">Aug 2017 – Feb 2022</span>
-            </div>
-            <span class="item-org">Korean Advanced Institute of Science and Technology (KAIST)</span>
-            <p>Double major in Business & Technology Management | Semi-minor in AI.</p>
-        </div>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>
+        I am currently an MS candidate in Electrical Engineering at <strong>The George Washington University</strong>, 
+        building on a rigorous Computer Science foundation from <strong>KAIST</strong>[cite: 5, 9]. 
+      </p>
+      <p>
+        My academic journey is defined by a deliberate transition from algorithmic intelligence to physical systems. 
+        While my background in CS provided a strong foundation in modern machine learning, I sought to understand 
+        the mathematical foundations—linear systems and stochastic processes—underlying neural dynamics[cite: 75, 81]. 
+      </p>
+      <p>
+        My goal is to reverse-engineer the principles of sparsity and stability found in the brain to solve the 
+        efficiency disparities in current AI models[cite: 86, 69].
+      </p>
+    </div>
+  </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
+  <section id="research">
+    <h2>Research Experience</h2>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Graduate Research Assistant (Master's Thesis)</span>
-                <span class="item-date">Sept 2025 – May 2026</span>
-            </div>
-            <span class="item-org">The George Washington University</span>
-            <ul>
-                <li>Developing a reduced-size Spiking Neural Network (SNN) of the CA3 hippocampal subregion to investigate auto-associative memory.</li>
-                <li>Researching memory engram formation using Spike-Timing-Dependent Plasticity (STDP) for pattern completion tasks.</li>
-                <li>Analyzing attractor dynamics stability and retrieval robustness under varying noise levels.</li>
-            </ul>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Graduate Research: Hippocampal Dynamics</span>
+        <span class="card-meta">Sept 2025 – Present</span>
+      </div>
+      <span class="card-subtitle">George Washington University | Thesis</span>
+      <ul>
+        <li>Developing a reduced-size <strong>Spiking Neural Network (SNN)</strong> of the CA3 subregion to model memory as a robust signal recovery problem[cite: 24, 87].</li>
+        <li>Investigating memory engram formation using <strong>Spike-Timing-Dependent Plasticity (STDP)</strong> to analyze pattern completion from partial cues[cite: 25].</li>
+        <li>Experimenting with attractor dynamics stability and network robustness under varying noise levels to extract computational principles for engineered systems[cite: 26, 86].</li>
+      </ul>
+    </div>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">AI Researcher</span>
-                <span class="item-date">Aug 2023 – June 2024</span>
-            </div>
-            <span class="item-org">Artificial Language Intelligence Co., Ltd (Seoul)</span>
-            <ul>
-                <li>Built a full-stack AAC (Augmentative and Alternative Communication) mobile app using React Native and Python (FastAPI).</li>
-                <li>Fine-tuned Llama 3 on a Korean database and integrated it for autocompletion; used OpenAI for real-time dialogue.</li>
-                <li>Implemented WebRTC for real-time audio and managed backend services on Google Cloud Platform.</li>
-            </ul>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Speech Emotion Recognition Researcher</span>
+        <span class="card-meta">Apr 2022 – Apr 2023</span>
+      </div>
+      <span class="card-subtitle">KAIST Institute for AI (Brain Science Research Center)</span>
+      <ul>
+        <li>Implemented an end-to-end emotion recognition system combining <strong>top-down and bottom-up attention</strong> mechanisms, improving accuracy on the IEMOCAP dataset[cite: 43].</li>
+        <li>Designed a novel full logarithmic filterbank that enables pitch shifting via frequency bin indexing for voice conversion tasks[cite: 48].</li>
+        <li>Extended models to multi-modal recognition using facial landmark features[cite: 46].</li>
+      </ul>
+    </div>
+  </section>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Researcher</span>
-                <span class="item-date">April 2022 – April 2023</span>
-            </div>
-            <span class="item-org">KAIST Institute for AI (Brain Science Research Center)</span>
-            <ul>
-                <li>Implemented an end-to-end Speech Emotion Recognition (SER) system using top-down and bottom-up attention, increasing classification accuracy on the IEMOCAP dataset.</li>
-                <li>Extended the SER model to a multi-modal approach using facial landmark features.</li>
-                <li>Developed a novel full logarithmic filterbank for pitch shifting via frequency bin indexing.</li>
-            </ul>
-        </div>
-    </section>
+  <section id="engineering">
+    <h2>Applied Engineering Projects</h2>
+    
+    <div class="grid">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Full-Stack AAC Application</span></div>
+        <p><strong>Role: AI Researcher @ Artificial Language Intelligence</strong> [cite: 27]</p>
+        <ul>
+          <li>Architected a cross-platform app (React Native) for augmentative communication[cite: 32].</li>
+          <li>Fine-tuned <strong>Llama 3</strong> on a Korean database for predictive text and leveraged OpenAI for real-time dialogue[cite: 34, 35].</li>
+          <li>Implemented <strong>WebRTC</strong> protocols for real-time audio communication and managed Google Cloud infrastructure[cite: 36, 38].</li>
+        </ul>
+      </div>
 
-    <section id="projects">
-        <h2>Selected Projects</h2>
-        
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Audio Reconstruction from Spectrogram</span>
-                <span class="item-date">KAIST Institute for AI</span>
-            </div>
-            <p>Implemented a regression model to predict spectrogram phase from amplitude. Fixed last-layer weights to imitate an inverse discrete-time Fourier transform (using cos and sin functions) to reconstruct waveforms.</p>
-        </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Audio Reconstruction</span></div>
+        <p><strong>KAIST Undergraduate Research</strong> [cite: 49]</p>
+        <ul>
+          <li>Implemented a regression model to predict spectrogram phase from amplitude[cite: 54].</li>
+          <li>Imitated an <strong>Inverse Discrete Time Fourier Transform</strong> by fixing last-layer weights to cosine and sine functions to reconstruct waveforms.</li>
+        </ul>
+      </div>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Anomaly Detection in Computer Networks</span>
-            </div>
-            <p>Applied advanced models (Adversarial Autoencoders, k-NN, XGBoost, GNNs) to detect intrusions in large-scale network traffic datasets using AWS compute engines.</p>
-        </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Network Anomaly Detection</span></div>
+        <p><strong>Large-scale Traffic Analysis</strong> [cite: 58]</p>
+        <ul>
+          <li>Deployed Adversarial Autoencoders, GNNs, and XGBoost on AWS compute engines to detect intrusions in large-scale network traffic[cite: 59].</li>
+        </ul>
+      </div>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Newspaper Trend Analysis</span>
-            </div>
-            <p>Utilized BERT sentence embeddings and HDBSCAN hierarchical clustering to group articles. Calculated cluster-level TF-IDF to identify and rank top trending topics.</p>
-        </div>
-        
-         <div class="item">
-            <div class="item-header">
-                <span class="item-title">Pintos Operating System</span>
-            </div>
-            <p>Implemented core OS components including Threads, User Programs, Virtual Memory, and File Systems.</p>
-        </div>
-    </section>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Newspaper Trend Analysis</span></div>
+        <p><strong>NLP Clustering</strong> [cite: 60]</p>
+        <ul>
+          <li> utilized <strong>BERT embeddings</strong> with HDBSCAN hierarchical clustering to identify trending topics[cite: 61].</li>
+          <li>Ranked clusters using cluster-level TF-IDF to extract top-k trends[cite: 62].</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="tags">
-                    <span>Python</span><span>C</span><span>Matlab</span><span>JavaScript</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>AI & ML</h3>
-                <div class="tags">
-                    <span>PyTorch</span><span>Librosa</span><span>SciPy</span><span>Spacy</span><span>NLTK</span><span>LlamaIndex</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Development</h3>
-                <div class="tags">
-                    <span>React / React Native</span><span>FastAPI</span><span>Django</span><span>WebRTC</span><span>MongoDB</span><span>GCP</span><span>Linux</span>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="skills">
+    <h2>Technical Arsenal</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="card-subtitle">Languages & Core</span>
+        <p>Python, C, MATLAB, JavaScript, Linear Systems Theory, Stochastic Processes[cite: 16, 8].</p>
+      </div>
+      <div class="card">
+        <span class="card-subtitle">AI & Simulation</span>
+        <p>PyTorch, Librosa, Spacy, LlamaIndex, CARLsim, gem5, Garnet2.0[cite: 17, 101].</p>
+      </div>
+      <div class="card">
+        <span class="card-subtitle">Full Stack Development</span>
+        <p>React Native, React, FastAPI, Django, WebRTC, MongoDB, GCP, Linux[cite: 17, 36].</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Connect</h2>
+    <div class="card" style="text-align: center;">
+      <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+        Open to collaborations in Neuroengineering and Bio-inspired AI.
+      </p>
+      <a href="mailto:ribka61t@gmail.com" style="font-size: 1.1rem; margin-right: 1.5rem;">ribka61t@gmail.com</a>
+      <a href="https://linkedin.com/in/ribkatam" target="_blank" style="font-size: 1.1rem; margin-right: 1.5rem;">LinkedIn</a>
+      <a href="https://github.com/ribkatam" target="_blank" style="font-size: 1.1rem;">GitHub</a>
+    </div>
+  </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 Ribka Tiruneh. Built based on CV data.</p>
+  <p>&copy; 2026 Ribka Tiruneh. | Based on verified CV and Research Statement data.</p>
 </footer>
 
 </body>
