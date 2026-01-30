@@ -1,200 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ribka Tiruneh | AI & ML Researcher</title>
-  <meta name="description" content="Portfolio of Ribka Tiruneh – AI, Machine Learning, and Spiking Neural Networks Researcher." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #020617, #0f172a);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribka Tiruneh | Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --bg: #f8f9fa;
+            --text: #333;
+            --light-text: #666;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            background: var(--bg);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        h1 { margin: 0; color: var(--primary); font-size: 2.5rem; }
+        .subtitle { color: var(--secondary); font-weight: 500; margin-top: 10px; }
+        .contact-info { margin-top: 20px; font-size: 0.9rem; color: var(--light-text); }
+        
+        /* Sections */
+        section { margin: 50px 0; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 10px; display: inline-block; }
+        
+        /* Experience & Projects */
+        .item { margin-bottom: 30px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .item-title { font-weight: bold; font-size: 1.1rem; color: var(--primary); }
+        .item-date { color: var(--light-text); font-style: italic; }
+        .item-org { color: var(--secondary); font-weight: 500; margin-bottom: 5px; display: block;}
+        ul { margin-top: 10px; padding-left: 20px; }
+        li { margin-bottom: 8px; }
 
-    header {
-      padding: 5rem 1.5rem 4rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      max-width: 700px;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .skill-category h3 { font-size: 1rem; color: var(--light-text); text-transform: uppercase; letter-spacing: 1px; }
+        .tags span {
+            display: inline-block;
+            background: #eef2f7;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 0 5px 5px 0;
+            color: var(--primary);
+        }
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(2,6,23,0.8);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #1f2933;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem 1.5rem;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid #1f2937;
-      border-radius: 16px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-  </style>
+        /* Footer */
+        footer { text-align: center; padding: 40px; color: var(--light-text); font-size: 0.8rem; }
+        
+        @media (max-width: 600px) {
+            .item-header { flex-direction: column; }
+            header { padding: 40px 20px; }
+        }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <header>
+<header>
     <h1>Ribka Tiruneh</h1>
-    <p>
-      AI & Machine Learning Researcher focused on spiking neural networks, 
-      speech emotion recognition, and applied deep learning systems.
-    </p>
-  </header>
-
-  <section id="about">
-    <h2>About</h2>
-    <div class="card">
-      <p>
-        I am an MS student in Electrical Engineering at George Washington University 
-        with a background in Computer Science from KAIST. My research focuses on 
-        biologically inspired learning, memory formation in spiking neural networks, 
-        and applied AI systems such as speech emotion recognition and AAC technologies.
-      </p>
+    <div class="subtitle">AI Researcher & Electrical Engineering MS Candidate</div>
+    <div class="contact-info">
+        D.C., U.S. | ribka61t@gmail.com | linkedin.com/in/ribkatam | github.com/ribkatam
     </div>
-  </section>
+</header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card"><strong>Languages</strong><br/>Python, C, MATLAB, JavaScript</div>
-      <div class="card"><strong>ML / DL</strong><br/>PyTorch, Librosa, Torchaudio, NLP</div>
-      <div class="card"><strong>Simulation</strong><br/>CARLsim, gem5, Garnet2.0</div>
-      <div class="card"><strong>Frameworks</strong><br/>React, React Native, FastAPI, Django</div>
-    </div>
-  </section>
+<div class="container">
 
-  <section id="experience">
-    <h2>Experience</h2>
+    <section id="education">
+        <h2>Education</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">MS in Electrical Engineering</span>
+                <span class="item-date">Aug 2024 – Present</span>
+            </div>
+            <span class="item-org">The George Washington University</span>
+            <p><strong>Coursework:</strong> Pattern Recognition, Machine Learning, Computer Architecture, Stochastic Processes, Linear Systems Theory.</p>
+        </div>
 
-    <div class="card">
-      <strong>Master's Thesis Research – GWU</strong><br/>
-      <em>Pattern Formation & Retrieval in CA3 SNNs</em>
-      <p>
-        Investigating auto-associative memory, STDP-driven engram formation, 
-        and attractor stability in reduced hippocampal networks.
-      </p>
-    </div>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">BS in Computer Science</span>
+                <span class="item-date">Aug 2017 – Feb 2022</span>
+            </div>
+            <span class="item-org">Korean Advanced Institute of Science and Technology (KAIST)</span>
+            <p>Double major in Business & Technology Management | Semi-minor in AI.</p>
+        </div>
+    </section>
 
-    <div class="card">
-      <strong>AI Researcher – Artificial Language Intelligence</strong>
-      <p>
-        Built a full-stack AAC mobile app using React Native, FastAPI, WebRTC, 
-        and LLM-based dialogue systems. Fine-tuned LLaMA models and deployed on GCP.
-      </p>
-    </div>
+    <section id="experience">
+        <h2>Experience</h2>
 
-    <div class="card">
-      <strong>Researcher – KAIST AI Institute</strong>
-      <p>
-        Developed speech emotion recognition and multi-modal emotion models using 
-        attention mechanisms and spectrogram-based learning.
-      </p>
-    </div>
-  </section>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Graduate Research Assistant (Master's Thesis)</span>
+                <span class="item-date">Sept 2025 – May 2026</span>
+            </div>
+            <span class="item-org">The George Washington University</span>
+            <ul>
+                <li>Developing a reduced-size Spiking Neural Network (SNN) of the CA3 hippocampal subregion to investigate auto-associative memory.</li>
+                <li>Researching memory engram formation using Spike-Timing-Dependent Plasticity (STDP) for pattern completion tasks.</li>
+                <li>Analyzing attractor dynamics stability and retrieval robustness under varying noise levels.</li>
+            </ul>
+        </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>Speech Emotion Recognition</strong>
-        <p>Top-down & bottom-up attention model evaluated on IEMOCAP.</p>
-      </div>
-      <div class="card">
-        <strong>CA3 Spiking Neural Network</strong>
-        <p>Reduced-scale hippocampal model for pattern completion.</p>
-      </div>
-      <div class="card">
-        <strong>Anomaly Detection</strong>
-        <p>GNNs, autoencoders, and ensemble methods for network intrusion detection.</p>
-      </div>
-      <div class="card">
-        <strong>Log-Frequency Filterbank</strong>
-        <p>Pitch-shiftable spectrogram representation for speech processing.</p>
-      </div>
-    </div>
-  </section>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">AI Researcher</span>
+                <span class="item-date">Aug 2023 – June 2024</span>
+            </div>
+            <span class="item-org">Artificial Language Intelligence Co., Ltd (Seoul)</span>
+            <ul>
+                <li>Built a full-stack AAC (Augmentative and Alternative Communication) mobile app using React Native and Python (FastAPI).</li>
+                <li>Fine-tuned Llama 3 on a Korean database and integrated it for autocompletion; used OpenAI for real-time dialogue.</li>
+                <li>Implemented WebRTC for real-time audio and managed backend services on Google Cloud Platform.</li>
+            </ul>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:ribka61t@gmail.com">ribka61t@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/ribkatam" target="_blank">github.com/ribkatam</a></p>
-    </div>
-  </section>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Researcher</span>
+                <span class="item-date">April 2022 – April 2023</span>
+            </div>
+            <span class="item-org">KAIST Institute for AI (Brain Science Research Center)</span>
+            <ul>
+                <li>Implemented an end-to-end Speech Emotion Recognition (SER) system using top-down and bottom-up attention, increasing classification accuracy on the IEMOCAP dataset.</li>
+                <li>Extended the SER model to a multi-modal approach using facial landmark features.</li>
+                <li>Developed a novel full logarithmic filterbank for pitch shifting via frequency bin indexing.</li>
+            </ul>
+        </div>
+    </section>
 
-  <footer>
-    © 2026 Ribka Tiruneh · Built with vanilla HTML & CSS
-  </footer>
+    <section id="projects">
+        <h2>Selected Projects</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Audio Reconstruction from Spectrogram</span>
+                <span class="item-date">KAIST Institute for AI</span>
+            </div>
+            <p>Implemented a regression model to predict spectrogram phase from amplitude. Fixed last-layer weights to imitate an inverse discrete-time Fourier transform (using cos and sin functions) to reconstruct waveforms.</p>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Anomaly Detection in Computer Networks</span>
+            </div>
+            <p>Applied advanced models (Adversarial Autoencoders, k-NN, XGBoost, GNNs) to detect intrusions in large-scale network traffic datasets using AWS compute engines.</p>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Newspaper Trend Analysis</span>
+            </div>
+            <p>Utilized BERT sentence embeddings and HDBSCAN hierarchical clustering to group articles. Calculated cluster-level TF-IDF to identify and rank top trending topics.</p>
+        </div>
+        
+         <div class="item">
+            <div class="item-header">
+                <span class="item-title">Pintos Operating System</span>
+            </div>
+            <p>Implemented core OS components including Threads, User Programs, Virtual Memory, and File Systems.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="tags">
+                    <span>Python</span><span>C</span><span>Matlab</span><span>JavaScript</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>AI & ML</h3>
+                <div class="tags">
+                    <span>PyTorch</span><span>Librosa</span><span>SciPy</span><span>Spacy</span><span>NLTK</span><span>LlamaIndex</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Development</h3>
+                <div class="tags">
+                    <span>React / React Native</span><span>FastAPI</span><span>Django</span><span>WebRTC</span><span>MongoDB</span><span>GCP</span><span>Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Ribka Tiruneh. Built based on CV data.</p>
+</footer>
 
 </body>
 </html>
